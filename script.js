@@ -338,12 +338,12 @@ function updateProductPrice() {
 }
 
 function updateOrderTotal() {
-    document.getElementById('total-price').innerText = `Koszt całkowity: ${totalPrice} ZŁ`;
+    document.getElementById('total-price').innerText = `TOTAL PRICE: ${totalPrice} ZŁ`;
 }
 
 let selectedProduct = {
-    name: "",
-    image: ""
+    name: "COSMIC DRIVE",
+    image: "GWB1.png"
 };
 
 document.querySelectorAll('.list-option').forEach(option => {
@@ -386,7 +386,7 @@ function updateOrderList() {
         listItem.innerHTML = `
             <img src="${item.image}" alt="${item.name}" width="50" height="50">
             <span>${item.name} - ${item.price} ZŁ</span>
-            <button onclick="removeOrderItem(${index})">Usuń</button>
+            <button onclick="removeOrderItem(${index})">REMOVE</button>
         `;
         orderList.appendChild(listItem);
     });
