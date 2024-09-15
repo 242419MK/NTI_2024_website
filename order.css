@@ -29,7 +29,9 @@
     padding: 0;
     margin: 0;
     overflow-y: auto; /* Umożliwia przewijanie, jeśli lista jest zbyt długa */
-}
+    overflow-x: hidden;
+} 
+
 
 /* Pojedynczy element zamówienia */
 #order-items li {
