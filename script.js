@@ -348,8 +348,11 @@ let selectedProduct = {
 
 document.querySelectorAll('.list-option').forEach(option => {
     option.addEventListener('click', function() {
-        selectedProduct.name = this.querySelector('.list-text').innerText;
-        selectedProduct.image = this.querySelector('img').src;
+        // Sprawdzenie, czy kliknięta opcja nie jest opcją dotyczącą przewodowości
+        if (!this.classList.contains('cable-cell1') && !this.classList.contains('cable-cell2')) {
+            selectedProduct.name = this.querySelector('.list-text').innerText;
+            selectedProduct.image = this.querySelector('img').src;
+        }
     });
 });
 
