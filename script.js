@@ -15,6 +15,34 @@
 
     document.querySelector('.title1').style.display = 'grid';
 
+
+    document.querySelectorAll('[class^="type-cell"]').forEach(function(element) {
+        element.addEventListener('click', function() {
+    
+            element.style.backgroundColor = '#0a8cf7';
+    
+            document.querySelectorAll('[class^="type-cell"]').forEach(function(el) {
+                if (el !== element) {
+                    el.style.backgroundColor = '';
+                }
+            });
+        });
+    });
+    
+    document.querySelectorAll('[class^="cable-cell"]').forEach(function(element) {
+        element.addEventListener('click', function() {
+    
+            element.style.backgroundColor = '#0a8cf7';
+    
+            document.querySelectorAll('[class^="cable-cell"]').forEach(function(el) {
+                if (el !== element) {
+                    el.style.backgroundColor = '';
+                }
+            });
+        });
+    });
+    
+
     document.getElementById('loginForm').addEventListener('submit', function(event) {
         event.preventDefault();
 
